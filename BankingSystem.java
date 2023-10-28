@@ -86,7 +86,8 @@ public class BankingSystem
             System.out.println("1. Create Account");
             System.out.println("2. Deposit");
             System.out.println("3. Withdraw");
-            System.out.println("4. Exit");
+            System.out.println("4. Check Balance");
+            System.out.println("5. Exit");
     
             System.out.print("Enter your choice: ");
 
@@ -143,7 +144,18 @@ public class BankingSystem
                         System.out.println("Account not found.");
                     }
                     break;
-                     case 4:
+                    case 4:
+                    System.out.print("Enter Account Number: ");
+                    int balanceAccountNumber = scanner.nextInt();
+                    scanner.nextLine();
+                    Account balanceAccount = bank.findAccount(balanceAccountNumber);
+                    if (balanceAccount != null) {
+                        System.out.println("Balance: " + balanceAccount.getBalance());
+                    } else {
+                        System.out.println("Account not found.");
+                    }
+                    break;
+                    case 5:
                     System.out.println("Exiting Banking System.");
                     scanner.close();
                     System.exit(0);
