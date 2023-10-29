@@ -36,7 +36,7 @@ class Account
 
     public void withdraw(double amount)
     {
-        if (amount < balance) 
+        if (amount <= balance) 
         {
             balance -= amount;
         } else 
