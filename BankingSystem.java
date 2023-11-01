@@ -7,7 +7,10 @@ class Account
     private int accountNumber;
     private String accountHolder;
     private double balance;
+
  // Constructor to initialize the account
+
+
     public Account(int accountNumber, String accountHolder, double initialBalance) 
     {
         this.accountNumber = accountNumber;
